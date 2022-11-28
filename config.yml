@@ -3,7 +3,7 @@ languageCode: zh-cn
 title: BugHub
 paginate: 5
 theme: PaperMod
-publishDir: doc
+publishDir: docs
 
 enableRobotsTXT: true
 buildDrafts: false

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://mzgo.github.io/sitemap.xml
