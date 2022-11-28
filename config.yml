@@ -18,6 +18,12 @@ minify:
   disableXML: true
   minifyOutput: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   env: production
   title: BugHub
@@ -26,8 +32,8 @@ params:
   author: zhuang.ma
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2006-01-02"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  defaultTheme: light # dark, light
+  disableThemeToggle: true
 
   ShowReadingTime: true
   ShowShareButtons: false # 分享按钮
@@ -39,7 +45,7 @@ params:
   UseHugoToc: false
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
   hidemeta: false
   hideSummary: false
   showtoc: true
@@ -88,6 +94,8 @@ params:
       url: "https://github.com/mzgo"
     - name: bilibili
       url: "https://space.bilibili.com/227415640"
+    - name: Rss
+      url: "index.xml"
 
   analytics:
     google:
@@ -120,7 +128,7 @@ params:
 
 menu:
   main:
-    - identifier: Search
+    - identifier: search
       name: 搜索
       url: /search/
       weight: 10
