@@ -1,0 +1,153 @@
+baseURL: "https://mzgo.github.io/"
+languageCode: zh-cn
+title: BugHub
+paginate: 5
+theme: PaperMod
+publishDir: doc
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+enableInlineShortcodes: true
+
+googleAnalytics: G-JT3L9W7RN9
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: BugHub
+  description: "纸上得来终觉浅，绝知此事要躬行"
+  keywords: [Blog, Java, Web, 博客, BugHub, mzcode]
+  author: zhuang.ma
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "2006-01-02"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false # 分享按钮
+  ShowPostNavLinks: true # 上一篇下一篇
+  ShowBreadCrumbs: false # 文章面包屑导航
+  ShowCodeCopyButtons: true
+  ShowWordCount: false # 文章字数统计
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+  hideFooter: true # 隐藏页脚
+
+
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "https://raw.githubusercontent.com/mzgo/mzgo.github.io.storage/master/assets/favicon.ico"
+    favicon16x16: "https://raw.githubusercontent.com/mzgo/mzgo.github.io.storage/master/assets/favicon-16x16.png"
+    favicon32x32: "https://raw.githubusercontent.com/mzgo/mzgo.github.io.storage/master/assets/favicon-32x32.png"
+    apple_touch_icon: "https://raw.githubusercontent.com/mzgo/mzgo.github.io.storage/master/assets/apple-touch-icon.png"
+    safari_pinned_tab: "https://raw.githubusercontent.com/mzgo/mzgo.github.io.storage/master/assets/apple-touch-icon.png"
+
+  label:
+    text: "Home"
+    icon: https://raw.githubusercontent.com/mzgo/mzgo.github.io.storage/master/assets/apple-touch-icon.png
+    iconHeight: 30
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: BugHub
+    subtitle: "风吹九万里，不问归期"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "BugHub \U0001F577"
+    Content: 记录编程生活
+
+  # 首页链接 https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
+  socialIcons:
+    - name: github
+      url: "https://github.com/mzgo"
+    - name: bilibili
+      url: "https://space.bilibili.com/227415640"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # editPost:
+  #   URL: "https://github.com/mzgo/mzgo.github.io/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: Search
+      name: 搜索
+      url: /search/
+      weight: 10
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+    - identifier: Archives
+      name: 存档
+      url: archives
+      weight: 40
+    - identifier: About
+      name: 关于
+      url: about
+      weight: 50
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
