@@ -55,7 +55,9 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --params "analytics.google.SiteVerificationTag=eiNjrmwL16SFaMFhFzZ2vvT3rS45eukZ5ZrspfVc73w" \
+            --googleAnalytics "G-JT3L9W7RN9"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -65,7 +67,6 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://py0.cn/" \
             --destination public_server
 
       - name: Upload py0.cn artifact

@@ -49,6 +49,9 @@ languages:
           url: about/
           weight: 40
 
+# Google Analytics 配置
+googleAnalytics: "G-0F7Y8NYMQR"
+
 # ==========================================
 # PaperMod 主题核心参数 (Params)
 # ==========================================
@@ -56,6 +59,13 @@ params:
   env: production
   description: "记录我的学习笔记、技术心得和生活随笔。"
   author: "zhuang.ma"
+
+  analytics:
+    google:
+      SiteVerificationTag: "g2sCl1IWEOluEtFRXqBPExR-TTIdY5bH7oV5DCmT58M"
+
+  opengraph:
+    enabled: true
 
   # 主题外观
   defaultTheme: auto # 自动跟随系统黑白模式
@@ -96,6 +106,7 @@ params:
   # 资源配置
   assets:
     disableHLJS: true # 使用 Hugo 自带的高亮，性能更好
+    favicon: "favicon.svg" # 站点图标，放在 static/ 目录下
 
 # ==========================================
 # 渲染引擎设置 (重要)
