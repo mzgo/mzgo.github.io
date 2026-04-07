@@ -4,6 +4,7 @@
 baseURL: https://py0.cn/
 title: MZCODE
 languageCode: "zh-cn"
+defaultContentLanguage: "zh"
 theme: ["PaperMod"]
 copyright: '© 2026 **zhuang.ma** | <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备16021931号-4</a>'
 
