@@ -68,6 +68,12 @@ jobs:
             --baseURL "https://py0.cn/" \
             --destination public_server
 
+      - name: Upload py0.cn artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public_server
+          path: public_server/
+
   # Deployment job
   deploy:
     environment:
@@ -84,12 +90,19 @@ jobs:
     runs-on: [self-hosted, linux]
     needs: build
     steps:
+      # 1. 在下载前先清理旧的残留（防止旧文件干扰）
+      - name: Clean up old artifacts
+        run: sudo rm -rf ./dist_server
+        
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: public_server
-          path: public_server
+          path: ./dist_server
       - name: Copy files to /opt/stacks/blog
         run: |
-          rm -rf /opt/stacks/blog/*
-          cp -r public_server/* /opt/stacks/blog/
+          sudo rm -rf /opt/stacks/blog/*
+          sudo cp -r ./dist_server/* /opt/stacks/blog/
+      # 2. 部署完成后清理临时文件（释放服务器磁盘空间）
+      - name: Post cleanup
+        run: sudo rm -rf ./dist_server
