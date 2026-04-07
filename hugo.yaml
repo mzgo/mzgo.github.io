@@ -1,0 +1,116 @@
+# ==========================================
+# 基础全局配置
+# ==========================================
+baseURL: https://py0.cn/
+title: MZCODE
+languageCode: "zh-cn"
+theme: ["PaperMod"]
+copyright: '© 2026 **zhuang.ma** | <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备16021931号-4</a>'
+
+# 常用功能开关
+enableEmoji: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# 侧边栏及分类设置
+mainsections: ["posts"]
+
+# 分页：每页显示的文章数量
+pagination:
+  pagerSize: 10
+
+# ==========================================
+# 纯中文语言配置
+# ==========================================
+languages:
+  zh:
+    languageName: "简体中文"
+    weight: 1
+    # 这里的翻译对应首页和元数据展示
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: 🔍 搜索
+          url: search/
+          weight: 10
+        - name: 📁 归档
+          url: archives/
+          weight: 20
+        - name: 🏷️ 标签
+          url: tags/
+          weight: 30
+        - name: 💡 关于
+          url: about/
+          weight: 40
+
+# ==========================================
+# PaperMod 主题核心参数 (Params)
+# ==========================================
+params:
+  env: production
+  description: "记录我的学习笔记、技术心得和生活随笔。"
+  author: "zhuang.ma"
+
+  # 主题外观
+  defaultTheme: auto # 自动跟随系统黑白模式
+  # disableThemeToggle: true # 如果不想让用户切换黑白，取消注释
+
+  # 文章功能配置
+  ShowReadingTime: true       # 显示阅读时间
+  ShowShareButtons: false     # 显示分享按钮
+  ShowPostNavLinks: true      # 显示上一篇/下一篇文章导航
+  ShowBreadCrumbs: true       # 显示面包屑导航
+  ShowCodeCopyButtons: true   # 显示代码块复制按钮
+  ShowToc: true               # 文章显示目录
+  ShowPageNums: true          # 显示页码
+  
+  # 日期格式化：改为符合中文习惯的年-月-日
+  DateFormat: "2006年01月02日"
+
+  # 首页模式设置：HomeInfo 模式（文字欢迎语 + 文章列表）
+  homeInfoParams:
+    Title: "你好，欢迎来到我的博客 👋"
+    Content: >
+      这里记录我的学习笔记、技术心得和生活随笔。
+      你可以通过下方的图标找到我。
+
+  # 社交链接（按需修改，不需要的直接删掉）
+  socialIcons:
+    - name: github
+      url: "https://github.com/mzgo"
+    - name: email
+      url: "mailto:3602384@qq.com"
+    - name: rss
+      url: "index.xml"
+
+  # 页脚版权信息（包含备案号建议）
+  # 注意：这里使用了 HTML 格式，必须配合下方的 markup.goldmark.renderer.unsafe 使用
+  copyright: '© 2026 **zhuang.ma** | <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备16021931号-4</a>'
+
+  # 资源配置
+  assets:
+    disableHLJS: true # 使用 Hugo 自带的高亮，性能更好
+
+# ==========================================
+# 渲染引擎设置 (重要)
+# ==========================================
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # 必须设为 true，否则上面的备案号链接无法点击
+  highlight:
+    noClasses: false # 必须设为 false，以支持 PaperMod 的代码高亮样式风格
+
+# ==========================================
+# 搜索功能支持 (需要手动创建 content/search.md)
+# ==========================================
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 搜索功能依赖 JSON 输出
