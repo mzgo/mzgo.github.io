@@ -81,7 +81,7 @@ jobs:
         uses: actions/deploy-pages@v5
 
   deploy_server:
-    runs-on: [VM-0-15-ubuntu, linux]
+    runs-on: [self-hosted, linux]
     needs: build
     steps:
       - name: Download build artifact
