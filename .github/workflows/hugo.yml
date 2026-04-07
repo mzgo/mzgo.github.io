@@ -52,12 +52,12 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
+          HUGO_PARAMS_ANALYTICS_GOOGLE_SITEVERIFICATIONTAG: "eiNjrmwL16SFaMFhFzZ2vvT3rS45eukZ5ZrspfVc73w"
+          HUGO_GOOGLEANALYTICS: "G-JT3L9W7RN9"
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --params "analytics.google.SiteVerificationTag=eiNjrmwL16SFaMFhFzZ2vvT3rS45eukZ5ZrspfVc73w" \
-            --googleAnalytics "G-JT3L9W7RN9"
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
