@@ -74,7 +74,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASS }} # 使用密码
-          port: 22
+          port: 50022
           source: "public_server/*"            # 这里的路径对应你编译出的文件夹
           target: "/opt/stacks/blog"           # 你的服务器目标目录
           strip_components: 1                  # 关键：去掉 public_server 这一层目录，只发内容
