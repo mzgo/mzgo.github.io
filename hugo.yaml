@@ -126,3 +126,11 @@ outputs:
     - HTML
     - RSS
     - JSON # 搜索功能依赖 JSON 输出
+
+# 开启输出文件的压缩
+minify:
+  minifyOutput: true
+  # 下面这个配置是为了让 HTML 压缩更彻底，去除空格和换行
+  tdewolff:
+    html:
+      keepWhitespace: false
