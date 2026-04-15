@@ -1,10 +1,16 @@
 ---
-date: '2026-04-09T17:02:40+08:00'
+date: 2026-04-09T17:02:40+08:00
 draft: false
-title: '利用 Clash Verge 接管多个自研代理客户端'
-categories: ["技术笔记"]
-tags: ["Clash", "Clash Verge", "Socks5", "流量管理", "进阶技巧"]
-description: "针对机场自研客户端无法直接通过 Clash 订阅的问题，分享如何利用 Clash Verge 的本地 Proxy Chaining 机制，通过配置 SOCKS5 端口实现多个自研代理端的统一分流管理与自动化调度。"
+title: 利用 Clash Verge 接管多个自研代理客户端
+categories:
+  - 技术笔记
+tags:
+  - Clash
+  - Clash Verge
+  - Socks5
+  - 流量管理
+  - 进阶技巧
+description: 针对机场自研客户端无法直接通过 Clash 订阅的问题，分享如何利用 Clash Verge 的本地 Proxy Chaining 机制，通过配置 SOCKS5 端口实现多个自研代理端的统一分流管理与自动化调度。
 ---
 
 # 技术笔记：利用 Clash Verge 接管多个自研代理客户端
